@@ -1,2 +1,2 @@
 # php-engine-skeleton
-Event Engine PHP Skeleton App
+Dockerized PHP skeleton for Event Engine
