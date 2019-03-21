@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cbc35601a6d6e39131d58281b10f2a0c",
+    "content-hash": "4ae889aeb97e2923cb244a0bf529e876",
     "packages": [
         {
             "name": "beberlei/assert",
@@ -210,16 +210,16 @@
         },
         {
             "name": "event-engine/php-document-store",
-            "version": "v0.1.0",
+            "version": "v0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/event-engine/php-document-store.git",
-                "reference": "f486e122f7b5967a75197b97835cf42df62a1986"
+                "reference": "16e3f285d99326a0946f79842b8c524c1380f8d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/event-engine/php-document-store/zipball/f486e122f7b5967a75197b97835cf42df62a1986",
-                "reference": "f486e122f7b5967a75197b97835cf42df62a1986",
+                "url": "https://api.github.com/repos/event-engine/php-document-store/zipball/16e3f285d99326a0946f79842b8c524c1380f8d4",
+                "reference": "16e3f285d99326a0946f79842b8c524c1380f8d4",
                 "shasum": ""
             },
             "require": {
@@ -257,20 +257,20 @@
             ],
             "description": "Event Engine PHP Document Store Contract",
             "homepage": "https://event-engine.io/",
-            "time": "2019-03-20T20:21:25+00:00"
+            "time": "2019-03-21T21:21:03+00:00"
         },
         {
             "name": "event-engine/php-engine",
-            "version": "v0.2.0",
+            "version": "v0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/event-engine/php-engine.git",
-                "reference": "f9eb49e2031320148099d030eac0617a03816759"
+                "reference": "3a172d95bde0ee3f7ba283a14ab5ccaa671d0273"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/event-engine/php-engine/zipball/f9eb49e2031320148099d030eac0617a03816759",
-                "reference": "f9eb49e2031320148099d030eac0617a03816759",
+                "url": "https://api.github.com/repos/event-engine/php-engine/zipball/3a172d95bde0ee3f7ba283a14ab5ccaa671d0273",
+                "reference": "3a172d95bde0ee3f7ba283a14ab5ccaa671d0273",
                 "shasum": ""
             },
             "require": {
@@ -279,7 +279,7 @@
                 "event-engine/php-engine-utils": "^0.1",
                 "event-engine/php-logger": "^0.1",
                 "event-engine/php-messaging": "^0.1",
-                "event-engine/php-persistence": "^0.1",
+                "event-engine/php-persistence": "^0.2",
                 "event-engine/php-schema": "^0.1",
                 "fig/http-message-util": "^1.1",
                 "php": "^7.2",
@@ -326,7 +326,7 @@
             ],
             "description": "CQRS / ES PHP SDK for event-engine.io",
             "homepage": "https://event-engine.io/",
-            "time": "2019-03-20T21:54:56+00:00"
+            "time": "2019-03-21T21:28:20+00:00"
         },
         {
             "name": "event-engine/php-engine-utils",
@@ -593,20 +593,20 @@
         },
         {
             "name": "event-engine/php-persistence",
-            "version": "v0.1.0",
+            "version": "v0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/event-engine/php-persistence.git",
-                "reference": "db1e80dedb83beb60551199ce97a471d01507272"
+                "reference": "1ebbb60f41655810069314ace3242b7f97d838b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/event-engine/php-persistence/zipball/db1e80dedb83beb60551199ce97a471d01507272",
-                "reference": "db1e80dedb83beb60551199ce97a471d01507272",
+                "url": "https://api.github.com/repos/event-engine/php-persistence/zipball/1ebbb60f41655810069314ace3242b7f97d838b7",
+                "reference": "1ebbb60f41655810069314ace3242b7f97d838b7",
                 "shasum": ""
             },
             "require": {
-                "event-engine/php-document-store": "^0.1",
+                "event-engine/php-document-store": "^0.2",
                 "event-engine/php-event-store": "^0.1",
                 "php": "^7.2",
                 "roave/security-advisories": "dev-master"
@@ -641,24 +641,24 @@
             ],
             "description": "Event Engine PHP Persistence Package",
             "homepage": "https://event-engine.io/",
-            "time": "2019-03-20T21:37:57+00:00"
+            "time": "2019-03-21T21:23:49+00:00"
         },
         {
             "name": "event-engine/php-postgres-document-store",
-            "version": "v0.2.0",
+            "version": "v0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/event-engine/php-postgres-document-store.git",
-                "reference": "b4669651d3bcf76aa5f3c64fef6aa268100bf53e"
+                "reference": "48545790a32e4404bed6d6c36c02c3ea790c1bee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/event-engine/php-postgres-document-store/zipball/b4669651d3bcf76aa5f3c64fef6aa268100bf53e",
-                "reference": "b4669651d3bcf76aa5f3c64fef6aa268100bf53e",
+                "url": "https://api.github.com/repos/event-engine/php-postgres-document-store/zipball/48545790a32e4404bed6d6c36c02c3ea790c1bee",
+                "reference": "48545790a32e4404bed6d6c36c02c3ea790c1bee",
                 "shasum": ""
             },
             "require": {
-                "event-engine/php-persistence": "^0.1",
+                "event-engine/php-persistence": "^0.2",
                 "ext-pdo": "*",
                 "php": "^7.1"
             },
@@ -698,7 +698,7 @@
             ],
             "description": "PostgreSQL Document Store for Event Engine",
             "homepage": "http://prooph.de/",
-            "time": "2019-03-20T22:12:49+00:00"
+            "time": "2019-03-21T22:02:41+00:00"
         },
         {
             "name": "event-engine/php-schema",
@@ -752,22 +752,22 @@
         },
         {
             "name": "event-engine/prooph-v7-event-store",
-            "version": "v0.1.0",
+            "version": "v0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/event-engine/prooph-v7-event-store.git",
-                "reference": "efbbd4b797f58fb81f12547bff0f78ec6f6129a7"
+                "reference": "0924cddc002156f0b60447b59c807acf4b72b848"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/event-engine/prooph-v7-event-store/zipball/efbbd4b797f58fb81f12547bff0f78ec6f6129a7",
-                "reference": "efbbd4b797f58fb81f12547bff0f78ec6f6129a7",
+                "url": "https://api.github.com/repos/event-engine/prooph-v7-event-store/zipball/0924cddc002156f0b60447b59c807acf4b72b848",
+                "reference": "0924cddc002156f0b60447b59c807acf4b72b848",
                 "shasum": ""
             },
             "require": {
                 "event-engine/php-engine-utils": "^0.1",
                 "event-engine/php-messaging": "^0.1",
-                "event-engine/php-persistence": "^0.1",
+                "event-engine/php-persistence": "^0.2",
                 "php": "^7.2",
                 "prooph/event-store": "^7.0",
                 "ramsey/uuid": "^3.6",
@@ -803,7 +803,7 @@
             ],
             "description": "Event Engine Prooph V7 Event Store Integration",
             "homepage": "https://event-engine.io/",
-            "time": "2019-03-20T21:39:37+00:00"
+            "time": "2019-03-21T22:08:12+00:00"
         },
         {
             "name": "fig/http-message-util",

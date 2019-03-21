@@ -66,11 +66,11 @@ With the command `docker-compose ps` you can list the running containers. This s
 ```bash
                     Name                                   Command               State                             Ports                           
 ---------------------------------------------------------------------------------------------------------------------------------------------------
-proophbuildingmgmt_event_engine_projection_1    docker-php-entrypoint php  ...   Up                                                                
-proophbuildingmgmt_nginx_1                      nginx -g daemon off;             Up      0.0.0.0:443->443/tcp, 0.0.0.0:8080->80/tcp                
-proophbuildingmgmt_php_1                        docker-php-entrypoint php-fpm    Up      9000/tcp                                                  
-proophbuildingmgmt_postgres_1                   docker-entrypoint.sh postgres    Up      0.0.0.0:5432->5432/tcp                                    
-proophbuildingmgmt_rabbit_1                     docker-entrypoint.sh rabbi ...   Up      0.0.0.0:8081->15671/tcp, 15672/tcp,                       
+eebuildings_event_engine_projection_1    docker-php-entrypoint php  ...   Up                                                                
+eebuildings_nginx_1                      nginx -g daemon off;             Up      0.0.0.0:443->443/tcp, 0.0.0.0:8080->80/tcp                
+eebuildings_php_1                        docker-php-entrypoint php-fpm    Up      9000/tcp                                                  
+eebuildings_postgres_1                   docker-entrypoint.sh postgres    Up      0.0.0.0:5432->5432/tcp                                    
+eebuildings_rabbit_1                     docker-entrypoint.sh rabbi ...   Up      0.0.0.0:8081->15671/tcp, 15672/tcp,                       
                                                                                          0.0.0.0:15691->15691/tcp, 25672/tcp, 4369/tcp, 5671/tcp,  
                                                                                          5672/tcp 
 ```
