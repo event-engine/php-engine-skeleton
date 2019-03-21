@@ -1,0 +1,66 @@
+{
+  "name": "event-engine/php-engine-skeleton",
+  "description": "Dockerized PHP skeleton for Event Engine",
+  "homepage": "https://event-engine.io/",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Alexander Miertsch",
+      "email": "contact@prooph.de",
+      "homepage": "http://www.prooph.de"
+    },
+    {
+      "name": "Sandro Keil",
+      "email": "contact@prooph.de",
+      "homepage": "http://prooph-software.com/"
+    }
+  ],
+  "require": {
+    "php": "^7.2",
+    "ext-pdo": "*",
+    "ext-mbstring": "*",
+    "ext-json": "*",
+    "roave/security-advisories": "dev-master",
+    "event-engine/php-engine": "^0.2",
+    "event-engine/discolight": "^0.1",
+    "event-engine/php-data": "^0.1",
+    "event-engine/php-schema": "^0.1",
+    "event-engine/php-messaging": "^0.1",
+    "event-engine/php-engine-utils": "^0.1",
+    "event-engine/php-logger": "^0.1",
+    "event-engine/php-persistence": "^0.1",
+    "event-engine/php-json-schema": "^0.1",
+    "event-engine/php-postgres-document-store": "^0.2",
+    "event-engine/prooph-v7-event-store": "^0.1",
+    "prooph/pdo-event-store": "^1.0",
+    "prooph/humus-amqp-producer": "^2.0",
+    "zendframework/zend-stdlib": "^3.1.0",
+    "zendframework/zend-config-aggregator": "^0.2.0",
+    "zendframework/zend-stratigility": "^3.0",
+    "zendframework/zend-expressive-helpers": "^5.0",
+    "nikic/fast-route": "^1.0",
+    "psr/log": "^1.0",
+    "monolog/monolog": "^1.21",
+    "psr/http-server-middleware": "^1.0",
+    "zendframework/zend-problem-details": "^1.0",
+    "opis/json-schema": "^1.0",
+    "zendframework/zend-diactoros": "^1.8"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "MyService\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "MyServiceTest\\": "tests/"
+    }
+  },
+  "prefer-stable": true,
+  "scripts": {
+    "test": "vendor/bin/phpunit"
+  }
+}
