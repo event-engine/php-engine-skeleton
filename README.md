@@ -13,16 +13,18 @@ $ docker-compose up -d
 $ docker-compose run php php scripts/create_event_stream.php
 ```
 
+Head over to `http://localhost:8080` to check if the containers are up and running.
+You should see a "It works" message.
+
 ## Customization
 
 Replace `MyService` in all files to your appropriate service namespace.
 
+@TODO: add functional and oop flavour branches
+
 ## Tutorial
 
 [https://event-engine.io/php-tutorial/](https://event-engine.io/php-tutorial/)
-
-Head over to `http://localhost:8080` to check if the containers are up and running.
-You should see a "It works" message.
 
 ### Database
 

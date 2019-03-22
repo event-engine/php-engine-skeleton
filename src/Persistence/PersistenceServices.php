@@ -65,8 +65,9 @@ trait PersistenceServices
         return $this->makeSingleton(DocumentStore::class, function () {
             return new PostgresDocumentStore(
                 $this->pdoConnection(),
-                null,
-                'CHAR(36) NOT NULL' //Use alternative docId schema, to allow uuids as well as md5 hashes
+                '', //No table prefix
+                'CHAR(36) NOT NULL', //Use alternative docId schema, to allow uuids as well as md5 hashes
+                false //Disable transaction handling, as this is controlled by the MultiModelStore
             );
         });
     }
