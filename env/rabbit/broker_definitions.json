@@ -1,35 +1,28 @@
 {
-  "rabbit_version": "3.6.11",
+  "rabbit_version": "3.6.14",
   "users": [
+    {
+      "name": "event-engine",
+      "password_hash": "qTSlFo1McOeeIkV67CER25Q+B6vquysVNWDL3yj2ISr5sstu",
+      "hashing_algorithm": "rabbit_password_hashing_sha256",
+      "tags": ""
+    },
     {
       "name": "prooph",
       "password_hash": "SxKhlLCGTegGcVTMyfQqJZAHJArM9wQi/CcPExWFbmax0f9V",
       "hashing_algorithm": "rabbit_password_hashing_sha256",
       "tags": "administrator"
-    },
-    {
-      "name": "event-engine",
-      "password_hash": "Uy8ulMhmZ7VQA2ZuKw4AVIrpKluNxdyOCbdyfBguhB+q6S9a",
-      "hashing_algorithm": "rabbit_password_hashing_sha256",
-      "tags": ""
     }
   ],
   "vhosts": [
     {
-      "name": "/"
+      "name": "/event-engine"
     },
     {
-      "name": "/event-engine"
+      "name": "/"
     }
   ],
   "permissions": [
-    {
-      "user": "prooph",
-      "vhost": "/",
-      "configure": ".*",
-      "write": ".*",
-      "read": ".*"
-    },
     {
       "user": "prooph",
       "vhost": "/event-engine",
@@ -40,6 +33,13 @@
     {
       "user": "event-engine",
       "vhost": "/event-engine",
+      "configure": ".*",
+      "write": ".*",
+      "read": ".*"
+    },
+    {
+      "user": "prooph",
+      "vhost": "/",
       "configure": ".*",
       "write": ".*",
       "read": ".*"

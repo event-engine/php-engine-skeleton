@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace MyService\Domain;
 
-use Codeliner\ArrayReader\ArrayReader;
 use MyService\Domain\Api\Aggregate;
 use MyService\Domain\Api\Command;
 use MyService\Domain\Api\Event;
@@ -26,8 +25,4 @@ trait DomainServices
             Listener::class,
         ];
     }
-
-    abstract protected function makeSingleton(string $serviceId, callable $factory);
-    abstract protected function config(): ArrayReader;
-    abstract protected function assertMandatoryConfigExists(string $path): void;
 }

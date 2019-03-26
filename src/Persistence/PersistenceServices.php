@@ -3,11 +3,8 @@ declare(strict_types=1);
 
 namespace MyService\Persistence;
 
-use Codeliner\ArrayReader\ArrayReader;
-use EventEngine\Discolight\ServiceRegistry;
 use EventEngine\DocumentStore\DocumentStore;
 use EventEngine\DocumentStore\Postgres\PostgresDocumentStore;
-use EventEngine\EventEngine;
 use EventEngine\EventStore\EventStore;
 use EventEngine\Persistence\ComposedMultiModelStore;
 use EventEngine\Persistence\MultiModelStore;
@@ -25,8 +22,6 @@ use Prooph\EventStore\TransactionalActionEventEmitterEventStore;
 
 trait PersistenceServices
 {
-    abstract public function eventEngine(): EventEngine;
-
     public function pdoConnection(): \PDO
     {
         return $this->makeSingleton(\PDO::class, function () {
@@ -131,8 +126,4 @@ trait PersistenceServices
             );
         });
     }
-
-    abstract protected function makeSingleton(string $serviceId, callable $factory);
-    abstract protected function config(): ArrayReader;
-    abstract protected function assertMandatoryConfigExists(string $path): void;
 }

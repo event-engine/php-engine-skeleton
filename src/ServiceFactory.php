@@ -3,12 +3,9 @@
 namespace MyService;
 
 use Codeliner\ArrayReader\ArrayReader;
-use EventEngine\Data\ImmutableRecordDataConverter;
 use EventEngine\Discolight\ServiceRegistry;
 use EventEngine\EventEngine;
 use EventEngine\JsonSchema\OpisJsonSchema;
-use EventEngine\Runtime\Flavour;
-use EventEngine\Runtime\PrototypingFlavour;
 use MyService\Domain\DomainServices;
 use MyService\Http\HttpServices;
 use MyService\Persistence\PersistenceServices;
@@ -73,13 +70,6 @@ final class ServiceFactory
             );
 
             return $eventEngine;
-        });
-    }
-
-    public function flavour(): Flavour
-    {
-        return $this->makeSingleton(Flavour::class, function () {
-            return new PrototypingFlavour(new ImmutableRecordDataConverter());
         });
     }
 

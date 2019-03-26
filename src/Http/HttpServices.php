@@ -4,19 +4,13 @@ declare(strict_types=1);
 namespace MyService\Http;
 
 use Codeliner\ArrayReader\ArrayReader;
-use EventEngine\Discolight\ServiceRegistry;
-use EventEngine\EventEngine;
 use MyService\System\PsrErrorLogger;
-use Psr\Log\LoggerInterface;
 use Zend\Diactoros\Response;
 use Zend\ProblemDetails\ProblemDetailsMiddleware;
 use Zend\ProblemDetails\ProblemDetailsResponseFactory;
 
 trait HttpServices
 {
-    abstract public function logger(): LoggerInterface;
-    abstract public function eventEngine(): EventEngine;
-
     //HTTP endpoints
     public function httpMessageBox(): MessageBox
     {
@@ -48,8 +42,4 @@ trait HttpServices
             return $errorHandler;
         });
     }
-
-    abstract protected function makeSingleton(string $serviceId, callable $factory);
-    abstract protected function config(): ArrayReader;
-    abstract protected function assertMandatoryConfigExists(string $path): void;
 }

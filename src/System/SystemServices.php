@@ -4,13 +4,17 @@ declare(strict_types=1);
 namespace MyService\System;
 
 use Codeliner\ArrayReader\ArrayReader;
+use EventEngine\Data\ImmutableRecordDataConverter;
 use EventEngine\Discolight\ServiceRegistry;
 use EventEngine\Logger\LogEngine;
 use EventEngine\Logger\SimpleMessageEngine;
 use EventEngine\Messaging\Message;
 use EventEngine\Prooph\V7\EventStore\GenericProophEvent;
+use EventEngine\Runtime\Flavour;
+use EventEngine\Runtime\PrototypingFlavour;
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
+use MyService\System\Api\EventEngineConfig;
 use MyService\System\Api\SystemQuery;
 use MyService\System\Api\SystemType;
 use Prooph\Common\Messaging\NoOpMessageConverter;
@@ -24,7 +28,15 @@ trait SystemServices
         return [
             SystemType::class,
             SystemQuery::class,
+            EventEngineConfig::class,
         ];
+    }
+
+    public function flavour(): Flavour
+    {
+        return $this->makeSingleton(Flavour::class, function () {
+            return new PrototypingFlavour(new ImmutableRecordDataConverter());
+        });
     }
 
     public function healthCheckResolver(): HealthCheckResolver
@@ -94,8 +106,4 @@ trait SystemServices
             };
         });
     }
-
-    abstract protected function makeSingleton(string $serviceId, callable $factory);
-    abstract protected function config(): ArrayReader;
-    abstract protected function assertMandatoryConfigExists(string $path): void;
 }
