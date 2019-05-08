@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4ae889aeb97e2923cb244a0bf529e876",
+    "content-hash": "c948a62d0b90e7f46513d7e27cf0eaf8",
     "packages": [
         {
             "name": "beberlei/assert",
@@ -210,16 +210,16 @@
         },
         {
             "name": "event-engine/php-document-store",
-            "version": "v0.2.0",
+            "version": "v0.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/event-engine/php-document-store.git",
-                "reference": "16e3f285d99326a0946f79842b8c524c1380f8d4"
+                "reference": "648de53dacba5a6c87f0331b2a0d226a3d4f23ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/event-engine/php-document-store/zipball/16e3f285d99326a0946f79842b8c524c1380f8d4",
-                "reference": "16e3f285d99326a0946f79842b8c524c1380f8d4",
+                "url": "https://api.github.com/repos/event-engine/php-document-store/zipball/648de53dacba5a6c87f0331b2a0d226a3d4f23ed",
+                "reference": "648de53dacba5a6c87f0331b2a0d226a3d4f23ed",
                 "shasum": ""
             },
             "require": {
@@ -257,20 +257,20 @@
             ],
             "description": "Event Engine PHP Document Store Contract",
             "homepage": "https://event-engine.io/",
-            "time": "2019-03-21T21:21:03+00:00"
+            "time": "2019-04-30T20:18:32+00:00"
         },
         {
             "name": "event-engine/php-engine",
-            "version": "v0.3.1",
+            "version": "v0.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/event-engine/php-engine.git",
-                "reference": "d846eceb683f09989de2fb7f5f2c3735aed0c3df"
+                "reference": "98ad903c7afe38ee8a19a3ee5179e5b9117c12f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/event-engine/php-engine/zipball/d846eceb683f09989de2fb7f5f2c3735aed0c3df",
-                "reference": "d846eceb683f09989de2fb7f5f2c3735aed0c3df",
+                "url": "https://api.github.com/repos/event-engine/php-engine/zipball/98ad903c7afe38ee8a19a3ee5179e5b9117c12f5",
+                "reference": "98ad903c7afe38ee8a19a3ee5179e5b9117c12f5",
                 "shasum": ""
             },
             "require": {
@@ -279,7 +279,7 @@
                 "event-engine/php-engine-utils": "^0.1",
                 "event-engine/php-logger": "^0.1",
                 "event-engine/php-messaging": "^0.1",
-                "event-engine/php-persistence": "^0.2",
+                "event-engine/php-persistence": "^0.3",
                 "event-engine/php-schema": "^0.1",
                 "fig/http-message-util": "^1.1",
                 "php": "^7.2",
@@ -292,15 +292,13 @@
             "require-dev": {
                 "bookdown/bookdown": "1.x-dev",
                 "event-engine/php-json-schema": "^0.1",
-                "event-engine/prooph-v7-event-store": "^0.1",
+                "event-engine/prooph-v7-event-store": "^0.4",
                 "justinrainbow/json-schema": "^5.2",
                 "malukenho/docheader": "^0.1.4",
                 "opis/json-schema": "^1.0",
                 "phpunit/phpunit": "^7.0",
                 "prooph/php-cs-fixer-config": "^0.3",
-                "satooshi/php-coveralls": "^1.0",
-                "webuni/commonmark-attributes-extension": "^0.5.0",
-                "webuni/commonmark-table-extension": "^0.6.1"
+                "satooshi/php-coveralls": "^1.0"
             },
             "type": "library",
             "autoload": {
@@ -326,20 +324,20 @@
             ],
             "description": "CQRS / ES PHP SDK for event-engine.io",
             "homepage": "https://event-engine.io/",
-            "time": "2019-03-23T21:27:25+00:00"
+            "time": "2019-05-08T20:36:46+00:00"
         },
         {
             "name": "event-engine/php-engine-utils",
-            "version": "v0.1.0",
+            "version": "v0.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/event-engine/php-engine-utils.git",
-                "reference": "c986c4a529d3868b6359d47e0a59f4bfb2d18ab5"
+                "reference": "7158d26115aad73cad978d896810e9e7be306e93"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/event-engine/php-engine-utils/zipball/c986c4a529d3868b6359d47e0a59f4bfb2d18ab5",
-                "reference": "c986c4a529d3868b6359d47e0a59f4bfb2d18ab5",
+                "url": "https://api.github.com/repos/event-engine/php-engine-utils/zipball/7158d26115aad73cad978d896810e9e7be306e93",
+                "reference": "7158d26115aad73cad978d896810e9e7be306e93",
                 "shasum": ""
             },
             "require": {
@@ -377,20 +375,20 @@
             ],
             "description": "Event Engine PHP Utilities",
             "homepage": "https://event-engine.io/",
-            "time": "2019-03-20T21:29:46+00:00"
+            "time": "2019-05-08T22:00:20+00:00"
         },
         {
             "name": "event-engine/php-event-store",
-            "version": "v0.1.0",
+            "version": "v0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/event-engine/php-event-store.git",
-                "reference": "f198ba767c4179f83de445d73079935585336a6f"
+                "reference": "b76761ca29a86738cc482515d59eb211218719e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/event-engine/php-event-store/zipball/f198ba767c4179f83de445d73079935585336a6f",
-                "reference": "f198ba767c4179f83de445d73079935585336a6f",
+                "url": "https://api.github.com/repos/event-engine/php-event-store/zipball/b76761ca29a86738cc482515d59eb211218719e8",
+                "reference": "b76761ca29a86738cc482515d59eb211218719e8",
                 "shasum": ""
             },
             "require": {
@@ -427,7 +425,7 @@
             ],
             "description": "Event Engine PHP Event Store Contract",
             "homepage": "https://event-engine.io/",
-            "time": "2019-03-20T20:12:46+00:00"
+            "time": "2019-04-26T12:20:47+00:00"
         },
         {
             "name": "event-engine/php-json-schema",
@@ -593,21 +591,22 @@
         },
         {
             "name": "event-engine/php-persistence",
-            "version": "v0.2.0",
+            "version": "v0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/event-engine/php-persistence.git",
-                "reference": "1ebbb60f41655810069314ace3242b7f97d838b7"
+                "reference": "873506d31d94a246de0cb79f61d7efcb4e297de2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/event-engine/php-persistence/zipball/1ebbb60f41655810069314ace3242b7f97d838b7",
-                "reference": "1ebbb60f41655810069314ace3242b7f97d838b7",
+                "url": "https://api.github.com/repos/event-engine/php-persistence/zipball/873506d31d94a246de0cb79f61d7efcb4e297de2",
+                "reference": "873506d31d94a246de0cb79f61d7efcb4e297de2",
                 "shasum": ""
             },
             "require": {
                 "event-engine/php-document-store": "^0.2",
-                "event-engine/php-event-store": "^0.1",
+                "event-engine/php-event-store": "^0.2",
+                "event-engine/php-messaging": "^0.1",
                 "php": "^7.2",
                 "roave/security-advisories": "dev-master"
             },
@@ -641,24 +640,24 @@
             ],
             "description": "Event Engine PHP Persistence Package",
             "homepage": "https://event-engine.io/",
-            "time": "2019-03-21T21:23:49+00:00"
+            "time": "2019-04-26T12:35:14+00:00"
         },
         {
             "name": "event-engine/php-postgres-document-store",
-            "version": "v0.3.0",
+            "version": "v0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/event-engine/php-postgres-document-store.git",
-                "reference": "48545790a32e4404bed6d6c36c02c3ea790c1bee"
+                "reference": "b8242553ff5c199ac25d32209883a8dd0988846a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/event-engine/php-postgres-document-store/zipball/48545790a32e4404bed6d6c36c02c3ea790c1bee",
-                "reference": "48545790a32e4404bed6d6c36c02c3ea790c1bee",
+                "url": "https://api.github.com/repos/event-engine/php-postgres-document-store/zipball/b8242553ff5c199ac25d32209883a8dd0988846a",
+                "reference": "b8242553ff5c199ac25d32209883a8dd0988846a",
                 "shasum": ""
             },
             "require": {
-                "event-engine/php-persistence": "^0.2",
+                "event-engine/php-persistence": "^0.3",
                 "ext-pdo": "*",
                 "php": "^7.1"
             },
@@ -698,7 +697,7 @@
             ],
             "description": "PostgreSQL Document Store for Event Engine",
             "homepage": "http://prooph.de/",
-            "time": "2019-03-21T22:02:41+00:00"
+            "time": "2019-05-08T22:08:12+00:00"
         },
         {
             "name": "event-engine/php-schema",
@@ -752,22 +751,22 @@
         },
         {
             "name": "event-engine/prooph-v7-event-store",
-            "version": "v0.2",
+            "version": "v0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/event-engine/prooph-v7-event-store.git",
-                "reference": "0924cddc002156f0b60447b59c807acf4b72b848"
+                "reference": "ff6a081bcce995c851fdd8613e5741c7815e545a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/event-engine/prooph-v7-event-store/zipball/0924cddc002156f0b60447b59c807acf4b72b848",
-                "reference": "0924cddc002156f0b60447b59c807acf4b72b848",
+                "url": "https://api.github.com/repos/event-engine/prooph-v7-event-store/zipball/ff6a081bcce995c851fdd8613e5741c7815e545a",
+                "reference": "ff6a081bcce995c851fdd8613e5741c7815e545a",
                 "shasum": ""
             },
             "require": {
                 "event-engine/php-engine-utils": "^0.1",
                 "event-engine/php-messaging": "^0.1",
-                "event-engine/php-persistence": "^0.2",
+                "event-engine/php-persistence": "^0.3",
                 "php": "^7.2",
                 "prooph/event-store": "^7.0",
                 "ramsey/uuid": "^3.6",
@@ -803,7 +802,7 @@
             ],
             "description": "Event Engine Prooph V7 Event Store Integration",
             "homepage": "https://event-engine.io/",
-            "time": "2019-03-21T22:08:12+00:00"
+            "time": "2019-04-26T12:46:19+00:00"
         },
         {
             "name": "fig/http-message-util",
@@ -1438,16 +1437,16 @@
         },
         {
             "name": "prooph/pdo-event-store",
-            "version": "v1.10.3",
+            "version": "v1.10.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/prooph/pdo-event-store.git",
-                "reference": "9f6b1cbd82d8dc36c1cda7f3f46272e3781a1858"
+                "reference": "9cfa6ecb853b17bbe9c6e18d2f628b7b5cf914d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/prooph/pdo-event-store/zipball/9f6b1cbd82d8dc36c1cda7f3f46272e3781a1858",
-                "reference": "9f6b1cbd82d8dc36c1cda7f3f46272e3781a1858",
+                "url": "https://api.github.com/repos/prooph/pdo-event-store/zipball/9cfa6ecb853b17bbe9c6e18d2f628b7b5cf914d8",
+                "reference": "9cfa6ecb853b17bbe9c6e18d2f628b7b5cf914d8",
                 "shasum": ""
             },
             "require": {
@@ -1501,7 +1500,7 @@
             ],
             "description": "Prooph PDO EventStore",
             "homepage": "http://getprooph.org/",
-            "time": "2019-01-31T19:32:08+00:00"
+            "time": "2019-04-10T02:19:03+00:00"
         },
         {
             "name": "prooph/service-bus",
@@ -1914,12 +1913,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "018ec51b676a4d1efc971950d1d9619570b71676"
+                "reference": "2149b00d8c04ccbc71f38a261d0129d5b032b5df"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/018ec51b676a4d1efc971950d1d9619570b71676",
-                "reference": "018ec51b676a4d1efc971950d1d9619570b71676",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/2149b00d8c04ccbc71f38a261d0129d5b032b5df",
+                "reference": "2149b00d8c04ccbc71f38a261d0129d5b032b5df",
                 "shasum": ""
             },
             "conflict": {
@@ -1933,14 +1932,14 @@
                 "aws/aws-sdk-php": ">=3,<3.2.1",
                 "brightlocal/phpwhois": "<=4.2.5",
                 "bugsnag/bugsnag-laravel": ">=2,<2.0.2",
-                "cakephp/cakephp": ">=1.3,<1.3.18|>=2,<2.4.99|>=2.5,<2.5.99|>=2.6,<2.6.12|>=2.7,<2.7.6|>=3,<3.0.15|>=3.1,<3.1.4|>=3.4,<3.4.14|>=3.5,<3.5.17|>=3.6,<3.6.4",
+                "cakephp/cakephp": ">=1.3,<1.3.18|>=2,<2.4.99|>=2.5,<2.5.99|>=2.6,<2.6.12|>=2.7,<2.7.6|>=3,<3.5.18|>=3.6,<3.6.15|>=3.7,<3.7.7",
                 "cart2quote/module-quotation": ">=4.1.6,<=4.4.5|>=5,<5.4.4",
                 "cartalyst/sentry": "<=2.1.6",
                 "codeigniter/framework": "<=3.0.6",
                 "composer/composer": "<=1.0.0-alpha11",
                 "contao-components/mediaelement": ">=2.14.2,<2.21.1",
-                "contao/core": ">=2,<3.5.35",
-                "contao/core-bundle": ">=4,<4.4.18|>=4.5,<4.5.8",
+                "contao/core": ">=2,<3.5.39",
+                "contao/core-bundle": ">=4,<4.4.39|>=4.5,<4.7.5",
                 "contao/listing-bundle": ">=4,<4.4.8",
                 "contao/newsletter-bundle": ">=4,<4.1",
                 "david-garcia/phpwhois": "<=4.3.1",
@@ -1954,9 +1953,9 @@
                 "doctrine/mongodb-odm-bundle": ">=2,<3.0.1",
                 "doctrine/orm": ">=2,<2.4.8|>=2.5,<2.5.1",
                 "dompdf/dompdf": ">=0.6,<0.6.2",
-                "drupal/core": ">=7,<7.64|>=8,<8.5.13|>=8.6,<8.6.12",
-                "drupal/drupal": ">=7,<7.64|>=8,<8.5.13|>=8.6,<8.6.12",
-                "erusev/parsedown": "<1.7",
+                "drupal/core": ">=7,<7.65|>=8,<8.5.14|>=8.6,<8.6.14",
+                "drupal/drupal": ">=7,<7.65|>=8,<8.5.14|>=8.6,<8.6.14",
+                "erusev/parsedown": "<1.7.2",
                 "ezsystems/ezpublish-kernel": ">=5.3,<5.3.12.1|>=5.4,<5.4.13.1|>=6,<6.7.9.1|>=6.8,<6.13.5.1|>=7,<7.2.4.1|>=7.3,<7.3.2.1",
                 "ezsystems/ezpublish-legacy": ">=5.3,<5.3.12.6|>=5.4,<5.4.12.3|>=2011,<2017.12.4.3|>=2018.6,<2018.6.1.4|>=2018.9,<2018.9.1.3",
                 "ezsystems/repository-forms": ">=2.3,<2.3.2.1",
@@ -1984,9 +1983,9 @@
                 "laravel/framework": ">=4,<4.0.99|>=4.1,<=4.1.31|>=4.2,<=4.2.22|>=5,<=5.0.35|>=5.1,<=5.1.46|>=5.2,<=5.2.45|>=5.3,<=5.3.31|>=5.4,<=5.4.36|>=5.5,<5.5.42|>=5.6,<5.6.30",
                 "laravel/socialite": ">=1,<1.0.99|>=2,<2.0.10",
                 "league/commonmark": "<0.18.3",
-                "magento/magento1ce": "<1.9.4",
-                "magento/magento1ee": ">=1.9,<1.14.4",
-                "magento/product-community-edition": ">=2,<2.2.7",
+                "magento/magento1ce": "<1.9.4.1",
+                "magento/magento1ee": ">=1.9,<1.14.4.1",
+                "magento/product-community-edition": ">=2,<2.2.8|>=2.3,<2.3.1",
                 "monolog/monolog": ">=1.8,<1.12",
                 "namshi/jose": "<2.2",
                 "onelogin/php-saml": "<2.10.4",
@@ -2018,7 +2017,7 @@
                 "silverstripe/userforms": "<3",
                 "simple-updates/phpwhois": "<=1",
                 "simplesamlphp/saml2": "<1.10.6|>=2,<2.3.8|>=3,<3.1.4",
-                "simplesamlphp/simplesamlphp": "<1.16.3",
+                "simplesamlphp/simplesamlphp": "<1.15.2|>=1.16,<1.16.3",
                 "simplesamlphp/simplesamlphp-module-infocard": "<1.0.1",
                 "slim/slim": "<2.6",
                 "smarty/smarty": "<3.1.33",
@@ -2029,23 +2028,26 @@
                 "swiftmailer/swiftmailer": ">=4,<5.4.5",
                 "sylius/admin-bundle": ">=1,<1.0.17|>=1.1,<1.1.9|>=1.2,<1.2.2",
                 "sylius/sylius": ">=1,<1.0.17|>=1.1,<1.1.9|>=1.2,<1.2.2",
-                "symfony/dependency-injection": ">=2,<2.0.17",
+                "symfony/cache": ">=3.2,<3.4.26|>=4,<4.1.12|>=4.2,<4.2.7",
+                "symfony/dependency-injection": ">=2,<2.0.17|>=2.7,<2.7.51|>=2.8,<2.8.50|>=3,<3.4.26|>=4,<4.1.12|>=4.2,<4.2.7",
                 "symfony/form": ">=2.3,<2.3.35|>=2.4,<2.6.12|>=2.7,<2.7.50|>=2.8,<2.8.49|>=3,<3.4.20|>=4,<4.0.15|>=4.1,<4.1.9|>=4.2,<4.2.1",
-                "symfony/framework-bundle": ">=2,<2.3.18|>=2.4,<2.4.8|>=2.5,<2.5.2",
-                "symfony/http-foundation": ">=2,<2.7.49|>=2.8,<2.8.44|>=3,<3.3.18|>=3.4,<3.4.14|>=4,<4.0.14|>=4.1,<4.1.3",
+                "symfony/framework-bundle": ">=2,<2.3.18|>=2.4,<2.4.8|>=2.5,<2.5.2|>=2.7,<2.7.51|>=2.8,<2.8.50|>=3,<3.4.26|>=4,<4.1.12|>=4.2,<4.2.7",
+                "symfony/http-foundation": ">=2,<2.7.51|>=2.8,<2.8.50|>=3,<3.4.26|>=4,<4.1.12|>=4.2,<4.2.7",
                 "symfony/http-kernel": ">=2,<2.3.29|>=2.4,<2.5.12|>=2.6,<2.6.8",
                 "symfony/intl": ">=2.7,<2.7.38|>=2.8,<2.8.31|>=3,<3.2.14|>=3.3,<3.3.13",
+                "symfony/phpunit-bridge": ">=2.8,<2.8.50|>=3,<3.4.26|>=4,<4.1.12|>=4.2,<4.2.7",
                 "symfony/polyfill": ">=1,<1.10",
                 "symfony/polyfill-php55": ">=1,<1.10",
+                "symfony/proxy-manager-bridge": ">=2.7,<2.7.51|>=2.8,<2.8.50|>=3,<3.4.26|>=4,<4.1.12|>=4.2,<4.2.7",
                 "symfony/routing": ">=2,<2.0.19",
-                "symfony/security": ">=2,<2.7.50|>=2.8,<2.8.49|>=3,<3.4.19|>=4,<4.0.15|>=4.1,<4.1.9|>=4.2,<4.2.1",
+                "symfony/security": ">=2,<2.7.51|>=2.8,<2.8.50|>=3,<3.4.26|>=4,<4.1.12|>=4.2,<4.2.7",
                 "symfony/security-bundle": ">=2,<2.7.48|>=2.8,<2.8.41|>=3,<3.3.17|>=3.4,<3.4.11|>=4,<4.0.11",
                 "symfony/security-core": ">=2.4,<2.6.13|>=2.7,<2.7.9|>=2.7.30,<2.7.32|>=2.8,<2.8.37|>=3,<3.3.17|>=3.4,<3.4.7|>=4,<4.0.7",
                 "symfony/security-csrf": ">=2.4,<2.7.48|>=2.8,<2.8.41|>=3,<3.3.17|>=3.4,<3.4.11|>=4,<4.0.11",
                 "symfony/security-guard": ">=2.8,<2.8.41|>=3,<3.3.17|>=3.4,<3.4.11|>=4,<4.0.11",
-                "symfony/security-http": ">=2.3,<2.3.41|>=2.4,<2.7.50|>=2.8,<2.8.49|>=3,<3.4.20|>=4,<4.0.15|>=4.1,<4.1.9|>=4.2,<4.2.1",
+                "symfony/security-http": ">=2.3,<2.3.41|>=2.4,<2.7.51|>=2.8,<2.8.50|>=3,<3.4.26|>=4,<4.1.12|>=4.2,<4.2.7",
                 "symfony/serializer": ">=2,<2.0.11",
-                "symfony/symfony": ">=2,<2.7.50|>=2.8,<2.8.49|>=3,<3.4.20|>=4,<4.0.15|>=4.1,<4.1.9|>=4.2,<4.2.1",
+                "symfony/symfony": ">=2,<2.7.51|>=2.8,<2.8.50|>=3,<3.4.26|>=4,<4.1.12|>=4.2,<4.2.7",
                 "symfony/translation": ">=2,<2.0.17",
                 "symfony/validator": ">=2,<2.0.24|>=2.1,<2.1.12|>=2.2,<2.2.5|>=2.3,<2.3.3",
                 "symfony/web-profiler-bundle": ">=2,<2.3.19|>=2.4,<2.4.9|>=2.5,<2.5.4",
@@ -2057,10 +2059,11 @@
                 "titon/framework": ">=0,<9.9.99",
                 "truckersmp/phpwhois": "<=4.3.1",
                 "twig/twig": "<1.38|>=2,<2.7",
-                "typo3/cms": ">=6.2,<6.2.30|>=7,<7.6.32|>=8,<8.7.23|>=9,<9.5.4",
-                "typo3/cms-core": ">=8,<8.7.23|>=9,<9.5.4",
+                "typo3/cms": ">=6.2,<6.2.30|>=7,<7.6.32|>=8,<8.7.25|>=9,<9.5.6",
+                "typo3/cms-core": ">=8,<8.7.25|>=9,<9.5.6",
                 "typo3/flow": ">=1,<1.0.4|>=1.1,<1.1.1|>=2,<2.0.1|>=2.3,<2.3.16|>=3,<3.0.10|>=3.1,<3.1.7|>=3.2,<3.2.7|>=3.3,<3.3.5",
                 "typo3/neos": ">=1.1,<1.1.3|>=1.2,<1.2.13|>=2,<2.0.4",
+                "typo3/phar-stream-wrapper": ">=1,<2.1.1|>=3,<3.1.1",
                 "ua-parser/uap-php": "<3.8",
                 "wallabag/tcpdf": "<6.2.22",
                 "willdurand/js-translation-bundle": "<2.1.1",
@@ -2076,6 +2079,7 @@
                 "zendframework/zend-captcha": ">=2,<2.4.9|>=2.5,<2.5.2",
                 "zendframework/zend-crypt": ">=2,<2.4.9|>=2.5,<2.5.2",
                 "zendframework/zend-db": ">=2,<2.0.99|>=2.1,<2.1.99|>=2.2,<2.2.10|>=2.3,<2.3.5",
+                "zendframework/zend-developer-tools": ">=1.2.2,<1.2.3",
                 "zendframework/zend-diactoros": ">=1,<1.8.4",
                 "zendframework/zend-feed": ">=1,<2.10.3",
                 "zendframework/zend-form": ">=2,<2.2.7|>=2.3,<2.3.1",
@@ -2110,20 +2114,20 @@
                 }
             ],
             "description": "Prevents installation of composer packages with known security vulnerabilities: no API, simply require it",
-            "time": "2019-03-22T05:18:50+00:00"
+            "time": "2019-05-08T13:51:25+00:00"
         },
         {
             "name": "spatie/array-to-xml",
-            "version": "2.8.1",
+            "version": "2.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/array-to-xml.git",
-                "reference": "2bf193b3f795d5a42e147c4fa155c288878312e7"
+                "reference": "934a35b7505059830a515ab9b06fa25fa9dab0bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/array-to-xml/zipball/2bf193b3f795d5a42e147c4fa155c288878312e7",
-                "reference": "2bf193b3f795d5a42e147c4fa155c288878312e7",
+                "url": "https://api.github.com/repos/spatie/array-to-xml/zipball/934a35b7505059830a515ab9b06fa25fa9dab0bf",
+                "reference": "934a35b7505059830a515ab9b06fa25fa9dab0bf",
                 "shasum": ""
             },
             "require": {
@@ -2159,7 +2163,7 @@
                 "convert",
                 "xml"
             ],
-            "time": "2019-03-15T18:43:25+00:00"
+            "time": "2019-05-06T06:33:48+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -2780,16 +2784,16 @@
         },
         {
             "name": "myclabs/deep-copy",
-            "version": "1.8.1",
+            "version": "1.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/myclabs/DeepCopy.git",
-                "reference": "3e01bdad3e18354c3dce54466b7fbe33a9f9f7f8"
+                "reference": "e6828efaba2c9b79f4499dae1d66ef8bfa7b2b72"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/3e01bdad3e18354c3dce54466b7fbe33a9f9f7f8",
-                "reference": "3e01bdad3e18354c3dce54466b7fbe33a9f9f7f8",
+                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/e6828efaba2c9b79f4499dae1d66ef8bfa7b2b72",
+                "reference": "e6828efaba2c9b79f4499dae1d66ef8bfa7b2b72",
                 "shasum": ""
             },
             "require": {
@@ -2824,7 +2828,7 @@
                 "object",
                 "object graph"
             ],
-            "time": "2018-06-11T23:09:50+00:00"
+            "time": "2019-04-07T13:18:21+00:00"
         },
         {
             "name": "phar-io/manifest",
@@ -2984,16 +2988,16 @@
         },
         {
             "name": "phpdocumentor/reflection-docblock",
-            "version": "4.3.0",
+            "version": "4.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "94fd0001232e47129dd3504189fa1c7225010d08"
+                "reference": "bdd9f737ebc2a01c06ea7ff4308ec6697db9b53c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/94fd0001232e47129dd3504189fa1c7225010d08",
-                "reference": "94fd0001232e47129dd3504189fa1c7225010d08",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/bdd9f737ebc2a01c06ea7ff4308ec6697db9b53c",
+                "reference": "bdd9f737ebc2a01c06ea7ff4308ec6697db9b53c",
                 "shasum": ""
             },
             "require": {
@@ -3031,7 +3035,7 @@
                 }
             ],
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
-            "time": "2017-11-30T07:14:17+00:00"
+            "time": "2019-04-30T17:48:53+00:00"
         },
         {
             "name": "phpdocumentor/type-resolver",
@@ -3397,16 +3401,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "7.5.8",
+            "version": "7.5.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "c29c0525cf4572c11efe1db49a8b8aee9dfac58a"
+                "reference": "134669cf0eeac3f79bc7f0c793efbc158bffc160"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/c29c0525cf4572c11efe1db49a8b8aee9dfac58a",
-                "reference": "c29c0525cf4572c11efe1db49a8b8aee9dfac58a",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/134669cf0eeac3f79bc7f0c793efbc158bffc160",
+                "reference": "134669cf0eeac3f79bc7f0c793efbc158bffc160",
                 "shasum": ""
             },
             "require": {
@@ -3477,7 +3481,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2019-03-26T13:23:54+00:00"
+            "time": "2019-04-19T15:50:46+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
@@ -3646,16 +3650,16 @@
         },
         {
             "name": "sebastian/environment",
-            "version": "4.1.0",
+            "version": "4.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/environment.git",
-                "reference": "6fda8ce1974b62b14935adc02a9ed38252eca656"
+                "reference": "f2a2c8e1c97c11ace607a7a667d73d47c19fe404"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/6fda8ce1974b62b14935adc02a9ed38252eca656",
-                "reference": "6fda8ce1974b62b14935adc02a9ed38252eca656",
+                "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/f2a2c8e1c97c11ace607a7a667d73d47c19fe404",
+                "reference": "f2a2c8e1c97c11ace607a7a667d73d47c19fe404",
                 "shasum": ""
             },
             "require": {
@@ -3670,7 +3674,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.1-dev"
+                    "dev-master": "4.2-dev"
                 }
             },
             "autoload": {
@@ -3695,7 +3699,7 @@
                 "environment",
                 "hhvm"
             ],
-            "time": "2019-02-01T05:27:49+00:00"
+            "time": "2019-05-05T09:05:15+00:00"
         },
         {
             "name": "sebastian/exporter",
@@ -4047,16 +4051,16 @@
         },
         {
             "name": "theseer/tokenizer",
-            "version": "1.1.0",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/theseer/tokenizer.git",
-                "reference": "cb2f008f3f05af2893a87208fe6a6c4985483f8b"
+                "reference": "1c42705be2b6c1de5904f8afacef5895cab44bf8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/theseer/tokenizer/zipball/cb2f008f3f05af2893a87208fe6a6c4985483f8b",
-                "reference": "cb2f008f3f05af2893a87208fe6a6c4985483f8b",
+                "url": "https://api.github.com/repos/theseer/tokenizer/zipball/1c42705be2b6c1de5904f8afacef5895cab44bf8",
+                "reference": "1c42705be2b6c1de5904f8afacef5895cab44bf8",
                 "shasum": ""
             },
             "require": {
@@ -4083,7 +4087,7 @@
                 }
             ],
             "description": "A small library for converting tokenized PHP source code into XML and potentially other formats",
-            "time": "2017-04-07T12:08:54+00:00"
+            "time": "2019-04-04T09:56:43+00:00"
         },
         {
             "name": "webmozart/assert",
