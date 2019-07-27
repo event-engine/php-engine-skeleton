@@ -6,6 +6,7 @@ namespace MyService\Domain\Api;
 
 use EventEngine\EventEngine;
 use EventEngine\EventEngineDescription;
+use EventEngine\JsonSchema\Type\ObjectType;
 
 class Type implements EventEngineDescription
 {
@@ -19,12 +20,12 @@ class Type implements EventEngineDescription
      * const USER = 'User';
      *
      * You can use private static methods to define the type schemas and then register them in event engine together with the type name
-     * private static function user(): array
+     * private static function user(): ObjectType
      * {
      *      return JsonSchema::object([
      *          Payload::USER_ID => Schema::userId(),
      *          Payload::USERNAME => Schema::username()
-     *      ])
+     *      ]);
      * }
      *
      * Queries should only use type references as return types (at least when return type is an object).
