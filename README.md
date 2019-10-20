@@ -24,7 +24,7 @@ Replace `MyService` in all files to your appropriate service namespace.
 
 ## Tutorial
 
-[https://event-engine.io/php-tutorial/](https://event-engine.io/php-tutorial/)
+[https://event-engine.io/tutorial/](https://event-engine.io/tutorial/)
 
 ### Database
 
