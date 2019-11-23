@@ -186,9 +186,11 @@ final class MessageSchemaMiddleware implements RequestHandlerInterface
             $jsonSchema['items'] = $this->jsonSchemaToOpenApiSchema($jsonSchema['items']);
         }
 
-        if(isset($jsonSchema['$ref'])) {
-            $jsonSchema['$ref'] = str_replace('definitions', 'components/schemas', $jsonSchema['$ref']);
-        }
+        array_walk_recursive($jsonSchema, static function (&$value, $key) {
+            if ('$ref' === $key) {
+                $value = str_replace('definitions', 'components/schemas', $value);
+            }
+        });
 
         return $jsonSchema;
     }
