@@ -5,7 +5,7 @@ namespace MyServiceTest;
 
 class UnitTestCase extends TestCaseAbstract
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
         $this->setUpEventEngine();

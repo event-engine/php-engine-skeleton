@@ -1,9 +1,26 @@
 <?php
 declare(strict_types = 1);
 
+use EventEngine\DocumentStore\DocumentStore;
+use EventEngine\EeCockpit\EeCockpitHandler;
+use EventEngine\EventEngine;
+use Laminas\Diactoros\Response\EmptyResponse;
+use Laminas\Diactoros\Response\TextResponse;
+use Laminas\Diactoros\ServerRequest;
+use Laminas\Diactoros\ServerRequestFactory;
+use Laminas\HttpHandlerRunner\Emitter\SapiEmitter;
+use Laminas\HttpHandlerRunner\RequestHandlerRunner;
+use Laminas\Stratigility\Middleware\ErrorResponseGenerator;
+use Laminas\Stratigility\MiddlewarePipe;
+use Mezzio\Helper\BodyParams\BodyParamsMiddleware;
+use Mezzio\ProblemDetails\ProblemDetailsMiddleware;
+use MyService\Http\CorsMiddleware;
+use MyService\Http\OriginalUriMiddleware;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Server\RequestHandlerInterface as RequestHandler;
+use function Laminas\Stratigility\middleware;
+use function Laminas\Stratigility\path;
 
 chdir(dirname(__DIR__));
 
@@ -14,30 +31,51 @@ $container = include 'config/container.php';
 
 //Note: this is important and needs to happen before further dependencies are pulled
 $env = getenv('PROOPH_ENV')?: 'prod';
-$devMode = $env === \EventEngine\EventEngine::ENV_DEV;
+$devMode = $env === EventEngine::ENV_DEV;
 
-$app = new \Zend\Stratigility\MiddlewarePipe();
+$app = new MiddlewarePipe();
 
-$app->pipe($container->get(\Zend\ProblemDetails\ProblemDetailsMiddleware::class));
+$app->pipe($container->get(ProblemDetailsMiddleware::class));
 
-$app->pipe(new \Zend\Expressive\Helper\BodyParams\BodyParamsMiddleware());
+// CORS middleware ensures that cockpit can access the Event Engine backend, since it runs on another port
+$app->pipe(new CorsMiddleware());
 
-$app->pipe(new \MyService\Http\OriginalUriMiddleware());
+$app->pipe(new BodyParamsMiddleware());
 
-$app->pipe(\Zend\Stratigility\path(
+$app->pipe(new OriginalUriMiddleware());
+
+// Register Cockpit admin backend handler
+$app->pipe(path(
+    '/cockpit',
+    middleware(function (Request $req, RequestHandler $handler) use($container, $env, $devMode): Response {
+        /** @var EventEngine $eventEngine */
+        $eventEngine = $container->get(EventEngine::class);
+        $eventEngine->bootstrap($env, $devMode);
+
+        $cockpitHandler = new EeCockpitHandler(
+            $eventEngine,
+            $container->get(DocumentStore::class)
+        );
+
+        return $cockpitHandler->handle($req);
+    })
+));
+
+// Register Event Engine backend
+$app->pipe(path(
     '/api',
-    \Zend\Stratigility\middleware(function (Request $req, RequestHandler $handler) use($container, $env, $devMode): Response {
+    middleware(function (Request $req, RequestHandler $handler) use($container, $env, $devMode): Response {
         /** @var FastRoute\Dispatcher $router */
         $router = require 'config/api_router.php';
 
         $route = $router->dispatch($req->getMethod(), $req->getUri()->getPath());
 
         if ($route[0] === FastRoute\Dispatcher::NOT_FOUND) {
-            return new \Zend\Diactoros\Response\EmptyResponse(404);
+            return new EmptyResponse(404);
         }
 
         if ($route[0] === FastRoute\Dispatcher::METHOD_NOT_ALLOWED) {
-            return new \Zend\Diactoros\Response\EmptyResponse(405);
+            return new EmptyResponse(405);
         }
 
         foreach ($route[2] as $name => $value) {
@@ -48,7 +86,7 @@ $app->pipe(\Zend\Stratigility\path(
             throw new \RuntimeException("Http handler not found. Got " . $route[1]);
         }
 
-        $container->get(\EventEngine\EventEngine::class)->bootstrap($env, $devMode);
+        $container->get(EventEngine::class)->bootstrap($env, $devMode);
 
         /** @var RequestHandler $httpHandler */
         $httpHandler = $container->get($route[1]);
@@ -57,19 +95,20 @@ $app->pipe(\Zend\Stratigility\path(
     })
 ));
 
-$app->pipe(\Zend\Stratigility\path('/', \Zend\Stratigility\middleware(function (Request $request, $handler): Response {
+$app->pipe(path('/', middleware(function (Request $request, $handler): Response {
     //@TODO add homepage with infos about event-engine and the skeleton
-    return new \Zend\Diactoros\Response\TextResponse("It works");
+    return new TextResponse("It works");
 })));
 
-$server = \Zend\Diactoros\Server::createServer(
-    [$app, 'handle'],
-    $_SERVER,
-    $_GET,
-    $_POST,
-    $_COOKIE,
-    $_FILES
+$server = new RequestHandlerRunner(
+    $app,
+    new SapiEmitter(),
+    [ServerRequestFactory::class, 'fromGlobals'],
+    function (Throwable $e) {
+        $generator = new ErrorResponseGenerator();
+        return $generator($e, new ServerRequest(), new \Laminas\Diactoros\Response());
+    }
 );
 
-$server->listen();
+$server->run();
 
