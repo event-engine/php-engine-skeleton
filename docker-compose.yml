@@ -12,11 +12,18 @@ services:
       - .:/var/www
 
   php:
-    image: prooph/php:7.2-fpm
+    image: prooph/php:7.4-fpm
     volumes:
       - .:/var/www
     env_file:
       - ./app.env
+
+  cockpit:
+    image: proophsoftware/event-engine-cockpit:latest
+    ports:
+    - 444:443
+    volumes:
+      - ./ee-cockpit.config.js:/var/www/ee-ui.config.js
 
 # Uncomment to activate WriteModelStreamProjection
 #

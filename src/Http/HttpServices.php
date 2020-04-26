@@ -3,11 +3,10 @@ declare(strict_types=1);
 
 namespace MyService\Http;
 
-use Codeliner\ArrayReader\ArrayReader;
 use MyService\System\PsrErrorLogger;
-use Zend\Diactoros\Response;
-use Zend\ProblemDetails\ProblemDetailsMiddleware;
-use Zend\ProblemDetails\ProblemDetailsResponseFactory;
+use Laminas\Diactoros\Response;
+use Mezzio\ProblemDetails\ProblemDetailsMiddleware;
+use Mezzio\ProblemDetails\ProblemDetailsResponseFactory;
 
 trait HttpServices
 {

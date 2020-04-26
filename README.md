@@ -6,15 +6,15 @@ Dockerized PHP skeleton for [Event Engine](https://event-engine.io)
 Please make sure you have installed [Docker](https://docs.docker.com/engine/installation/ "Install Docker") and [Docker Compose](https://docs.docker.com/compose/install/ "Install Docker Compose").
 
 ```bash
-$ docker run --rm -it -v $(pwd):/app prooph/composer:7.2 create-project event-engine/php-engine-skeleton <your_project_name>
+$ docker run --rm -it -v $(pwd):/app prooph/composer:7.4 create-project event-engine/php-engine-skeleton <your_project_name>
 $ cd <your_project_name>
 $ sudo chown $(id -u -n):$(id -g -n) . -R
 $ docker-compose up -d
 $ docker-compose run php php scripts/create_event_stream.php
 ```
 
-Head over to `http://localhost:8080` to check if the containers are up and running.
-You should see a "It works" message.
+Head over to `https://localhost` to check if the containers are up and running.
+Accept the self-signed certificate and you should see a "It works" message.
 
 ## Customization
 
@@ -35,10 +35,14 @@ You can connect to the Postgres DB using following credentials (listed also in `
 ```dotenv
 PDO_DSN=pgsql:host=postgres port=5432 dbname=event_engine
 PDO_USER=postgres
-PDO_PWD=
+PDO_PWD=dev
 ```
 
 *Note: The DB runs insight a docker container. Use `localhost` as host name if you want to connect from your host system!*
+
+### Event Engine Cockpit
+[Cockpit](https://github.com/event-engine/cockpit) is an admin UI for Event Engine. You can access it on port `444`: [https://localhost:444](https://localhost:444).
+The skeleton is preconfigured with the [cockpit-php-backend handler](https://github.com/event-engine/cockpit-php-backend).
 
 ### RabbitMQ
 
@@ -118,10 +122,10 @@ You can also check the projection log with:
 $ docker-compose logs -f event_engine_projection
 ```
 
-### Swagger UI is not updated
+### Event Engine Cockpit is not updated
 
-When you add new commands or queries in Event Engine the Swagger UI will not automatically reread the schema from the backend.
-Simply reload the UI or press `Explore` button.
+When you add new commands or queries in Event Engine the Cockpit UI will not automatically reread the schema from the backend.
+Use the refresh button in the top menu to reload the schema.
 
 
 ## Batteries Included
