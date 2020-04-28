@@ -41,8 +41,14 @@ PDO_PWD=dev
 *Note: The DB runs insight a docker container. Use `localhost` as host name if you want to connect from your host system!*
 
 ### Event Engine Cockpit
-[Cockpit](https://github.com/event-engine/cockpit) is an admin UI for Event Engine. You can access it on port `444`: [https://localhost:444](https://localhost:444).
+[Cockpit](https://github.com/event-engine/cockpit) is an admin UI for Event Engine. You can access it on port `4444`: [https://localhost:4444](https://localhost:4444).
 The skeleton is preconfigured with the [cockpit-php-backend handler](https://github.com/event-engine/cockpit-php-backend).
+
+*Note: To avoid CORS issues the Nginx configuration of the Cockpit server is modified to also act as a reverse proxy for requests from Cockpit to the backend.*
+
+You can execute the built-in `HealthCheck` query to very that Cockpit can access the Event Engine backend.
+
+![HealthCheck](https://event-engine.io/img/Choose_Flavour_no_h.png)
 
 ### RabbitMQ
 
