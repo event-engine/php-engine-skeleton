@@ -3,6 +3,12 @@ declare(strict_types = 1);
 
 return \FastRoute\simpleDispatcher(function(\FastRoute\RouteCollector $r) {
     $r->addRoute(
+        ['GET'],
+        '/cockpit/{command:.+}',
+        \EventEngine\EeCockpit\EeCockpitHandler::class
+    );
+
+    $r->addRoute(
         ['POST'],
         '/messagebox',
         \MyService\Http\MessageBox::class

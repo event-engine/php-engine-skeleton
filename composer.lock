@@ -120,12 +120,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/event-engine/cockpit-php-backend.git",
-                "reference": "def3ab7de400f255bc5b4cc121aa57db64786379"
+                "reference": "a1b50f8ea4d36c3e6e414341c6d4e6aa96749129"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/event-engine/cockpit-php-backend/zipball/def3ab7de400f255bc5b4cc121aa57db64786379",
-                "reference": "def3ab7de400f255bc5b4cc121aa57db64786379",
+                "url": "https://api.github.com/repos/event-engine/cockpit-php-backend/zipball/a1b50f8ea4d36c3e6e414341c6d4e6aa96749129",
+                "reference": "a1b50f8ea4d36c3e6e414341c6d4e6aa96749129",
                 "shasum": ""
             },
             "require": {
@@ -154,7 +154,7 @@
                 }
             ],
             "description": "PHP PSR-15 based request handlers for Event Engine cockpit requests",
-            "time": "2020-04-26T15:01:44+00:00"
+            "time": "2020-04-27T19:50:31+00:00"
         },
         {
             "name": "event-engine/discolight",
@@ -955,16 +955,16 @@
         },
         {
             "name": "laminas/laminas-diactoros",
-            "version": "2.2.3",
+            "version": "2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-diactoros.git",
-                "reference": "b596c7141f5093aefec94cb5e8745212299e290f"
+                "reference": "5ab185dba63ec655a2380c97711b09adc7061f89"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-diactoros/zipball/b596c7141f5093aefec94cb5e8745212299e290f",
-                "reference": "b596c7141f5093aefec94cb5e8745212299e290f",
+                "url": "https://api.github.com/repos/laminas/laminas-diactoros/zipball/5ab185dba63ec655a2380c97711b09adc7061f89",
+                "reference": "5ab185dba63ec655a2380c97711b09adc7061f89",
                 "shasum": ""
             },
             "require": {
@@ -995,9 +995,12 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.1.x-dev",
-                    "dev-develop": "2.2.x-dev",
-                    "dev-release-1.8": "1.8.x-dev"
+                    "dev-master": "2.3.x-dev",
+                    "dev-develop": "2.4.x-dev"
+                },
+                "laminas": {
+                    "config-provider": "Laminas\\Diactoros\\ConfigProvider",
+                    "module": "Laminas\\Diactoros"
                 }
             },
             "autoload": {
@@ -1035,7 +1038,7 @@
                 "psr",
                 "psr-7"
             ],
-            "time": "2020-03-29T12:30:54+00:00"
+            "time": "2020-04-27T17:07:01+00:00"
         },
         {
             "name": "laminas/laminas-escaper",
@@ -1323,16 +1326,16 @@
         },
         {
             "name": "marc-mabe/php-enum",
-            "version": "v4.2.0",
+            "version": "v4.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/marc-mabe/php-enum.git",
-                "reference": "e6113cfec06ae1a6580812f4ea442fa696330988"
+                "reference": "29b5b7d8fc7b03a63d6af798847ad23146851e80"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/marc-mabe/php-enum/zipball/e6113cfec06ae1a6580812f4ea442fa696330988",
-                "reference": "e6113cfec06ae1a6580812f4ea442fa696330988",
+                "url": "https://api.github.com/repos/marc-mabe/php-enum/zipball/29b5b7d8fc7b03a63d6af798847ad23146851e80",
+                "reference": "29b5b7d8fc7b03a63d6af798847ad23146851e80",
                 "shasum": ""
             },
             "require": {
@@ -1340,13 +1343,15 @@
                 "php": ">=7.1"
             },
             "require-dev": {
-                "phpbench/phpbench": "^0.16.1",
-                "phpunit/phpunit": "^6.0"
+                "phpbench/phpbench": "^0.16.10",
+                "phpstan/phpstan": "^0.12.19",
+                "phpunit/phpunit": "^7.5.20",
+                "vimeo/psalm": "^3.11.2"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev",
+                    "dev-master": "4.3-dev",
                     "dev-3.x": "3.1-dev",
                     "dev-2.x": "2.3-dev",
                     "dev-1.x": "1.3-dev"
@@ -1385,7 +1390,7 @@
                 "type-hint",
                 "typehint"
             ],
-            "time": "2019-12-18T09:03:05+00:00"
+            "time": "2020-04-27T09:55:52+00:00"
         },
         {
             "name": "mezzio/mezzio-helpers",
@@ -1943,16 +1948,16 @@
         },
         {
             "name": "prooph/event-store",
-            "version": "v7.5.6",
+            "version": "v7.5.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/prooph/event-store.git",
-                "reference": "654e0230a4fd6cb2466ac145171b5062547a7b21"
+                "reference": "e8cc75e74b9caf325da358750c7375e08620f59b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/prooph/event-store/zipball/654e0230a4fd6cb2466ac145171b5062547a7b21",
-                "reference": "654e0230a4fd6cb2466ac145171b5062547a7b21",
+                "url": "https://api.github.com/repos/prooph/event-store/zipball/e8cc75e74b9caf325da358750c7375e08620f59b",
+                "reference": "e8cc75e74b9caf325da358750c7375e08620f59b",
                 "shasum": ""
             },
             "require": {
@@ -1969,7 +1974,7 @@
                 "phpunit/php-invoker": "^2.0",
                 "phpunit/phpunit": "^7.1.4",
                 "prooph/bookdown-template": "^0.2.3",
-                "prooph/php-cs-fixer-config": "^0.3",
+                "prooph/php-cs-fixer-config": "v0.3.1",
                 "psr/container": "^1.0",
                 "sandrokeil/interop-config": "^2.0.1",
                 "satooshi/php-coveralls": "^1.0"
@@ -2015,7 +2020,7 @@
                 "ddd",
                 "prooph"
             ],
-            "time": "2019-10-24T16:59:00+00:00"
+            "time": "2020-04-26T21:31:51+00:00"
         },
         {
             "name": "prooph/humus-amqp-producer",
@@ -3257,23 +3262,20 @@
         },
         {
             "name": "phpdocumentor/reflection-common",
-            "version": "2.0.0",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionCommon.git",
-                "reference": "63a995caa1ca9e5590304cd845c15ad6d482a62a"
+                "reference": "6568f4687e5b41b054365f9ae03fcb1ed5f2069b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionCommon/zipball/63a995caa1ca9e5590304cd845c15ad6d482a62a",
-                "reference": "63a995caa1ca9e5590304cd845c15ad6d482a62a",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionCommon/zipball/6568f4687e5b41b054365f9ae03fcb1ed5f2069b",
+                "reference": "6568f4687e5b41b054365f9ae03fcb1ed5f2069b",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~6"
             },
             "type": "library",
             "extra": {
@@ -3305,7 +3307,7 @@
                 "reflection",
                 "static analysis"
             ],
-            "time": "2018-08-07T13:53:10+00:00"
+            "time": "2020-04-27T09:25:28+00:00"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
@@ -3870,16 +3872,16 @@
         },
         {
             "name": "sebastian/code-unit",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/code-unit.git",
-                "reference": "8d8f09bd47c75159921e6e84fdef146343962866"
+                "reference": "00d2094a93573796ec6666401be467fa6efcd86a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/code-unit/zipball/8d8f09bd47c75159921e6e84fdef146343962866",
-                "reference": "8d8f09bd47c75159921e6e84fdef146343962866",
+                "url": "https://api.github.com/repos/sebastianbergmann/code-unit/zipball/00d2094a93573796ec6666401be467fa6efcd86a",
+                "reference": "00d2094a93573796ec6666401be467fa6efcd86a",
                 "shasum": ""
             },
             "require": {
@@ -3912,7 +3914,7 @@
             ],
             "description": "Collection of value objects that represent the PHP code units",
             "homepage": "https://github.com/sebastianbergmann/code-unit",
-            "time": "2020-03-30T11:59:20+00:00"
+            "time": "2020-04-27T06:25:01+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",

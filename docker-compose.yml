@@ -21,9 +21,12 @@ services:
   cockpit:
     image: proophsoftware/event-engine-cockpit:latest
     ports:
-    - 444:443
+    # Note: if you need to change the port 4444 to something else, you also need to change it in ee-cockpit.config.js
+    - 4444:443
     volumes:
-      - ./ee-cockpit.config.js:/var/www/ee-ui.config.js
+      - ./ee-cockpit.config.js:/var/www/ee-cockpit.config.js
+      # Add reverse proxy config for EE backend to avoid CORS issues
+      - ./env/cockpit/nginx/config/www.conf:/etc/nginx/conf.d/www.conf
 
 # Uncomment to activate WriteModelStreamProjection
 #

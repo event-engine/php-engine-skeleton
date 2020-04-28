@@ -83,8 +83,8 @@
      */
     exports.eeUiConfig = {
         env: {
-            schemaUrl: 'https://localhost/cockpit',
-            messageBoxUrl: 'https://localhost/api/messagebox',
+            schemaUrl: 'https://localhost:4444/api/cockpit',
+            messageBoxUrl: 'https://localhost:4444/api/messagebox',
             aggregateList: {
                 filterLimit: 500,
                 batchSize: 30,
