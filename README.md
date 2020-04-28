@@ -48,7 +48,7 @@ The skeleton is preconfigured with the [cockpit-php-backend handler](https://git
 
 You can execute the built-in `HealthCheck` query to very that Cockpit can access the Event Engine backend.
 
-![HealthCheck](https://event-engine.io/img/Choose_Flavour_no_h.png)
+![HealthCheck](https://github.com/event-engine/php-engine-skeleton/blob/master/docs/assets/cockpit_health_check.png?raw=true)
 
 ### RabbitMQ
 
