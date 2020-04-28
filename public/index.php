@@ -44,24 +44,6 @@ $app->pipe(new BodyParamsMiddleware());
 
 $app->pipe(new OriginalUriMiddleware());
 
-// Register Cockpit admin backend handler
-$app->pipe(path(
-    '/cockpit',
-    middleware(function (Request $req, RequestHandler $handler) use($container, $env, $devMode): Response {
-        /** @var EventEngine $eventEngine */
-        $eventEngine = $container->get(EventEngine::class);
-        $eventEngine->bootstrap($env, $devMode);
-
-        $cockpitHandler = new EeCockpitHandler(
-            $eventEngine,
-            $container->get(DocumentStore::class)
-        );
-
-        return $cockpitHandler->handle($req);
-    })
-));
-
-// Register Event Engine backend
 $app->pipe(path(
     '/api',
     middleware(function (Request $req, RequestHandler $handler) use($container, $env, $devMode): Response {
@@ -111,4 +93,3 @@ $server = new RequestHandlerRunner(
 );
 
 $server->run();
-

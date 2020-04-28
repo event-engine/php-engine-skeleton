@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace MyService\Http;
 
+use EventEngine\EeCockpit\EeCockpitHandler;
 use MyService\System\PsrErrorLogger;
 use Laminas\Diactoros\Response;
 use Mezzio\ProblemDetails\ProblemDetailsMiddleware;
@@ -39,6 +40,13 @@ trait HttpServices
             $errorHandler->attachListener(new PsrErrorLogger($this->logger()));
 
             return $errorHandler;
+        });
+    }
+
+    public function eeCockpitHandler(): EeCockpitHandler
+    {
+        return $this->makeSingleton(EeCockpitHandler::class, function () {
+            return new EeCockpitHandler($this->eventEngine(), $this->documentStore());
         });
     }
 }
