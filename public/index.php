@@ -14,7 +14,6 @@ use Laminas\Stratigility\Middleware\ErrorResponseGenerator;
 use Laminas\Stratigility\MiddlewarePipe;
 use Mezzio\Helper\BodyParams\BodyParamsMiddleware;
 use Mezzio\ProblemDetails\ProblemDetailsMiddleware;
-use MyService\Http\CorsMiddleware;
 use MyService\Http\OriginalUriMiddleware;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
@@ -36,9 +35,6 @@ $devMode = $env === EventEngine::ENV_DEV;
 $app = new MiddlewarePipe();
 
 $app->pipe($container->get(ProblemDetailsMiddleware::class));
-
-// CORS middleware ensures that cockpit can access the Event Engine backend, since it runs on another port
-$app->pipe(new CorsMiddleware());
 
 $app->pipe(new BodyParamsMiddleware());
 
