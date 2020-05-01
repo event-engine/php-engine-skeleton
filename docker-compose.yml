@@ -31,7 +31,7 @@ services:
 # Uncomment to activate WriteModelStreamProjection
 #
 #  event_engine_projection:
-#    image: prooph/php:7.2-cli
+#    image: prooph/php:7.4-cli
 #    volumes:
 #      - .:/app
 #    depends_on:
