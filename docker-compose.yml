@@ -12,7 +12,7 @@ services:
       - .:/var/www
 
   php:
-    image: prooph/php:7.4-fpm
+    build: ./env/php
     volumes:
       - .:/var/www
     env_file:
