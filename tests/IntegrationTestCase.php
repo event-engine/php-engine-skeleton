@@ -62,7 +62,7 @@ class IntegrationTestCase extends TestCaseAbstract
         }
 
         foreach ($aggregates as $aggregateType => $ids) {
-            foreach ($ids as $arId) {
+            foreach ($ids as $arId => $bool) {
                 $this->eventEngine->rebuildAggregateState($aggregateType, $arId);
             }
         }
