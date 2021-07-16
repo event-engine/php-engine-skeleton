@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "29eda72c83b0d28adc9f23f1468b0636",
+    "content-hash": "efe3f46c43070490aeb788920d354ee8",
     "packages": [
         {
             "name": "beberlei/assert",
@@ -271,27 +271,27 @@
         },
         {
             "name": "event-engine/discolight",
-            "version": "v0.2.0",
+            "version": "v0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/event-engine/discolight.git",
-                "reference": "700ca53d113bbd1645e940379abc3b86c7ca1425"
+                "reference": "d9141ec8c06c16bbbe0361ef54126837266f1b24"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/event-engine/discolight/zipball/700ca53d113bbd1645e940379abc3b86c7ca1425",
-                "reference": "700ca53d113bbd1645e940379abc3b86c7ca1425",
+                "url": "https://api.github.com/repos/event-engine/discolight/zipball/d9141ec8c06c16bbbe0361ef54126837266f1b24",
+                "reference": "d9141ec8c06c16bbbe0361ef54126837266f1b24",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.2",
+                "php": "^7.4 || ^8.0",
                 "psr/container": "^1.0",
                 "roave/security-advisories": "dev-master"
             },
             "require-dev": {
-                "malukenho/docheader": "^0.1.4",
-                "phpunit/phpunit": "^7.0",
-                "prooph/php-cs-fixer-config": "^0.3",
+                "malukenho/docheader": "^0.1.8",
+                "phpunit/phpunit": "^9.5.6",
+                "prooph/php-cs-fixer-config": "^v0.4.0",
                 "satooshi/php-coveralls": "^1.0"
             },
             "type": "library",
@@ -320,9 +320,9 @@
             "homepage": "https://event-engine.io/",
             "support": {
                 "issues": "https://github.com/event-engine/discolight/issues",
-                "source": "https://github.com/event-engine/discolight/tree/master"
+                "source": "https://github.com/event-engine/discolight/tree/v0.3.0"
             },
-            "time": "2019-10-18T23:18:56+00:00"
+            "time": "2021-07-16T12:40:48+00:00"
         },
         {
             "name": "event-engine/php-data",
@@ -5697,7 +5697,7 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": {
         "roave/security-advisories": 20,
         "event-engine/cockpit-php-backend": 20

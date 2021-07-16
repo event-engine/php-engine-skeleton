@@ -22,7 +22,7 @@
     "ext-json": "*",
     "roave/security-advisories": "dev-master",
     "event-engine/php-engine": "^v0.16",
-    "event-engine/discolight": "^v0.2",
+    "event-engine/discolight": "^v0.3",
     "event-engine/php-data": "^v2.0.0",
     "event-engine/php-schema": "v0.2.0",
     "event-engine/php-messaging": "v0.2.0",
@@ -62,6 +62,7 @@
     }
   },
   "prefer-stable": true,
+  "minimum-stability": "dev",
   "scripts": {
     "test": "vendor/bin/phpunit"
   }
