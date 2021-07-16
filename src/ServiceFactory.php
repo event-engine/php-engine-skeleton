@@ -6,6 +6,7 @@ use Codeliner\ArrayReader\ArrayReader;
 use EventEngine\Discolight\ServiceRegistry;
 use EventEngine\EventEngine;
 use EventEngine\JsonSchema\OpisJsonSchema;
+use EventEngine\Messaging\MessageProducer;
 use MyService\Domain\DomainServices;
 use MyService\Http\HttpServices;
 use MyService\Persistence\PersistenceServices;
@@ -55,19 +56,55 @@ final class ServiceFactory
         $this->assertContainerIsset();
 
         return $this->makeSingleton(EventEngine::class, function () {
-            //@TODO Load from cached config, if it exists
-            $eventEngine = new EventEngine(new OpisJsonSchema());
+            $cacheEnabled = $this->config->mixedValue('event_engine.cache_enabled', false);
+            $cachedConfigFile = $this->config->mixedValue('event_engine.cached_config_file', '');
 
-            foreach ($this->eventEngineDescriptions() as $description) {
-                $eventEngine->load($description);
+            $schema = $this->schema();
+            $flavour = $this->flavour();
+            $multiModelStore = $this->multiModelStore();
+            $logger = $this->logEngine();
+
+            $messageProducer = null;
+
+            if ($this->container->has(MessageProducer::class)) {
+                $messageProducer = $this->container->get(MessageProducer::class);
             }
 
-            $eventEngine->initialize(
-                $this->flavour(),
-                $this->multiModelStore(),
-                $this->logEngine(),
-                $this->container
-            );
+            if($cacheEnabled && $cachedConfigFile && file_exists($cachedConfigFile)) {
+                $cachedConfig = require $cachedConfigFile;
+
+                $eventEngine = EventEngine::fromCachedConfig(
+                    $cachedConfig,
+                    $schema,
+                    $flavour,
+                    $multiModelStore,
+                    $logger,
+                    $this->container,
+                    $multiModelStore,
+                    $messageProducer
+                );
+            } else {
+                $eventEngine = new EventEngine($schema);
+
+                foreach ($this->eventEngineDescriptions() as $description) {
+                    $eventEngine->load($description);
+                }
+
+                $eventEngine->initialize($flavour,
+                    $multiModelStore,
+                    $logger,
+                    $this->container,
+                    $multiModelStore,
+                    $messageProducer
+                );
+
+                if($cacheEnabled && $cachedConfigFile) {
+                    file_put_contents(
+                        $cacheEnabled,
+                        "<?php\nreturn " . var_export($eventEngine->compileCacheableConfig(), true) . ';'
+                    );
+                }
+            }
 
             return $eventEngine;
         });
