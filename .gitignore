@@ -12,3 +12,6 @@ data/*
 !data/.gitkeep
 src/Example/*
 bin/example.php
+.phpunit.result.cache
+.env
+app.env

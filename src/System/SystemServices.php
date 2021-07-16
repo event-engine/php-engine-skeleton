@@ -4,12 +4,14 @@ declare(strict_types=1);
 namespace MyService\System;
 
 use EventEngine\Data\ImmutableRecordDataConverter;
+use EventEngine\JsonSchema\OpisJsonSchema;
 use EventEngine\Logger\LogEngine;
 use EventEngine\Logger\SimpleMessageEngine;
 use EventEngine\Messaging\Message;
 use EventEngine\Prooph\V7\EventStore\GenericProophEvent;
 use EventEngine\Runtime\Flavour;
 use EventEngine\Runtime\PrototypingFlavour;
+use EventEngine\Schema\Schema;
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
 use MyService\System\Api\EventEngineConfig;
@@ -28,6 +30,13 @@ trait SystemServices
             SystemQuery::class,
             EventEngineConfig::class,
         ];
+    }
+
+    public function schema(): Schema
+    {
+        return $this->makeSingleton(Schema::class, function () {
+            return new OpisJsonSchema();
+        });
     }
 
     public function flavour(): Flavour

@@ -9,7 +9,7 @@ Please make sure you have installed [Docker](https://docs.docker.com/engine/inst
 $ docker run --rm -it -v $(pwd):/app prooph/composer:7.4 create-project event-engine/php-engine-skeleton <your_project_name>
 $ cd <your_project_name>
 $ sudo chown $(id -u -n):$(id -g -n) . -R
-$ docker-compose up -d
+$ ./dev.sh
 $ docker-compose run php php scripts/create_event_stream.php
 ```
 

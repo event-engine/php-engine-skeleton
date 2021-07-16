@@ -1,4 +1,4 @@
-version: '2'
+version: '2.4'
 
 services:
   nginx:
@@ -12,7 +12,8 @@ services:
       - .:/var/www
 
   php:
-    build: ./env/php
+    image: prooph/php:7.4-fpm
+    user: ${UID}
     volumes:
       - .:/var/www
     env_file:

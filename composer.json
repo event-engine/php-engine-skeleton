@@ -16,40 +16,40 @@
     }
   ],
   "require": {
-    "php": "^7.4",
+    "php": "^7.4 || ^8.0",
     "ext-pdo": "*",
     "ext-mbstring": "*",
     "ext-json": "*",
     "roave/security-advisories": "dev-master",
-    "event-engine/php-engine": "^0.15",
-    "event-engine/discolight": "^0.2",
-    "event-engine/php-data": "^1.0",
-    "event-engine/php-schema": "^0.1",
-    "event-engine/php-messaging": "^0.1",
-    "event-engine/php-engine-utils": "^0.1",
-    "event-engine/php-logger": "^0.1",
-    "event-engine/php-persistence": "^0.8",
-    "event-engine/php-json-schema": "^1.0",
-    "event-engine/php-postgres-document-store": "^0.11",
-    "event-engine/prooph-v7-event-store": "^0.9",
+    "event-engine/php-engine": "^v0.16",
+    "event-engine/discolight": "^v0.3",
+    "event-engine/php-data": "^v2.0.0",
+    "event-engine/php-schema": "v0.2.0",
+    "event-engine/php-messaging": "v0.2.0",
+    "event-engine/php-engine-utils": "v0.2.0",
+    "event-engine/php-logger": "v0.2.1",
+    "event-engine/php-persistence": "v0.9.0",
+    "event-engine/php-json-schema": "v2.0.1",
+    "event-engine/php-postgres-document-store": "v0.12.1",
+    "event-engine/prooph-v7-event-store": "v0.10.0",
     "event-engine/cockpit-php-backend": "dev-master",
-    "prooph/pdo-event-store": "^1.0",
-    "prooph/humus-amqp-producer": "^2.1",
-    "laminas/laminas-stdlib": "^3.2",
-    "laminas/laminas-config-aggregator": "^0.2.0",
-    "laminas/laminas-stratigility": "^3.2",
-    "mezzio/mezzio-helpers": "^5.3",
-    "nikic/fast-route": "^1.3",
-    "psr/log": "^1.1",
-    "monolog/monolog": "^1.24",
-    "psr/http-server-middleware": "^1.0",
-    "mezzio/mezzio-problem-details": "^1.0",
-    "opis/json-schema": "^1.0",
-    "laminas/laminas-diactoros": "^2.2",
-    "laminas/laminas-httphandlerrunner": "^1.1"
+    "prooph/pdo-event-store": "v1.13.0",
+    "prooph/humus-amqp-producer": "^v2.1.1",
+    "laminas/laminas-stdlib": "^3.4.0",
+    "laminas/laminas-config-aggregator": "^1.5.0",
+    "laminas/laminas-stratigility": "^3.4.0",
+    "mezzio/mezzio-helpers": "^5.6.0",
+    "nikic/fast-route": "^v1.3.0",
+    "psr/log": "^1.1.4",
+    "monolog/monolog": "^2.3.1",
+    "psr/http-server-middleware": "^1.0.1",
+    "mezzio/mezzio-problem-details": "^1.4.0",
+    "opis/json-schema": "^1.1.0",
+    "laminas/laminas-diactoros": "^2.6.0",
+    "laminas/laminas-httphandlerrunner": "^2.0.0"
   },
   "require-dev": {
-    "phpunit/phpunit": "^9.0"
+    "phpunit/phpunit": "^9.5.6"
   },
   "autoload": {
     "psr-4": {
@@ -62,6 +62,7 @@
     }
   },
   "prefer-stable": true,
+  "minimum-stability": "dev",
   "scripts": {
     "test": "vendor/bin/phpunit"
   }
