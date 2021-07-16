@@ -10,6 +10,7 @@ use Laminas\ConfigAggregator\PhpFileProvider;
 
 $cacheConfig = [
     'config_cache_path' => 'data/cache/config-cache.php',
+    ConfigAggregator::ENABLE_CACHE => true,
 ];
 $aggregator = new ConfigAggregator([
     new ArrayProvider($cacheConfig),
