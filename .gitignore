@@ -13,3 +13,5 @@ data/*
 src/Example/*
 bin/example.php
 .phpunit.result.cache
+.env
+app.env
